@@ -1,8 +1,8 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
-
+require_once("../config/config.php");
 require_once("../src/vendor/autoload.php");
 
-use App\teste;
-
-$teste=new teste();
+echo DIRPAGE;
+echo "<br>";
+echo DIRREQ;
