@@ -11,7 +11,7 @@ class ClassRender{
 
     public function getDir(){return $this->Dir;}
     public function setDir($Dir){$this->Dir = $Dir;}
-    public function getTile(){return $this->Title;}
+    public function getTitle(){return $this->Title;}
     public function setTitle($Title){$this->Title = $Title;}
     public function getDescription(){return $this->Description;}
     public function setDescription($Description){$this->Description = $Description;}
