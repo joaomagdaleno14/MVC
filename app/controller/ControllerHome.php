@@ -1,9 +1,11 @@
 <?php
 namespace App\Controller;
-
+include_once("../src/class/ClassRender.php");
+include_once("../src/interfaces/InterfaceView.php");
 use Src\Classes\ClassRender;
+use Src\Interfaces\InterfaceView;
 
-class ControllerHome extends ClassRender{
+class ControllerHome extends ClassRender implements InterfaceView{
     
     public function __construct(){
         $this->setTitle("Pagina Inicial");
@@ -12,5 +14,7 @@ class ControllerHome extends ClassRender{
         $this->setDir("home/");
         $this->renderLayout();
     } 
+
+    
 
 }
