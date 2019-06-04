@@ -9,21 +9,10 @@ class Dispach extends ClassRoutes{
     private $Param=[];
     private $Obj;
 
-    protected function getMethod(){
-        return $this->Method;
-    }
-
-    public function setMethod($Method){
-        $this->Method = $Method;
-    }
-
-    protected function getParam(){
-        return $this->Param;
-    }
-
-    public function setParam($Param){
-        $this->Param = $Param;
-    }
+    protected function getMethod(){ return $this->Method;}
+    public function setMethod($Method){ $this->Method = $Method;}
+    protected function getParam(){ return $this->Param;}
+    public function setParam($Param){ $this->Param = $Param;}
 
     #Método Construtor
     public function __construct(){
@@ -38,7 +27,6 @@ class Dispach extends ClassRoutes{
 
         if(isset($this->parseUrl()[1])){
             self::addMethod();
-
         }
     }
 
@@ -54,9 +42,8 @@ class Dispach extends ClassRoutes{
     #Método de adição de parâmetros do controller
     private function addParam(){
         $ContArray=count($this->parseUrl());
-
         if($ContArray > 2){
-            foreach ($this->parseUrl() as $Key => $Value) {
+            foreach($this->parseUrl() as $Key => $Value){
                 if($Key > 1){
                     $this->setParam($this->Param += [$Key => $Value]);
                 }
