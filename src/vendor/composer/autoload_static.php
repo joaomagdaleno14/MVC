@@ -19,6 +19,10 @@ class ComposerStaticInit9b3ade21cf0c12676cd73a83f61c5e59
         array (
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'I' => 
+        array (
+            'Interfaces\\' => 11,
+        ),
         'C' => 
         array (
             'Classes\\' => 8,
@@ -41,6 +45,10 @@ class ComposerStaticInit9b3ade21cf0c12676cd73a83f61c5e59
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/../Interfaces',
         ),
         'Classes\\' => 
         array (

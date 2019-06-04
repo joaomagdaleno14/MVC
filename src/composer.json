@@ -14,7 +14,8 @@
             "Classes\\":"../class/",
             "App\\":"../app/",
             "Traits\\":"../traits/",
-            "Src\\":"../src/"
+            "Src\\":"../src/",
+            "Interfaces\\":"../Interfaces"
         }
     }
 }
