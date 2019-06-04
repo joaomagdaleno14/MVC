@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller;
 
-class ControllerHome{
+class Controller404{
     public function __construct(){
-        echo "voce está na pagina inicial!";
+        echo "<h1>Esta pagina não existe</h1>";
     }
 }
