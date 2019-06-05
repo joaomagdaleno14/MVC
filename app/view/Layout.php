@@ -18,7 +18,6 @@
     </div>
      <div class="Header">
          <img src="<?php echo DIRIMG.'banner.jpg'?>" alt="Banner"><br>
-         TEL:(XX)xxxxxxxx
         <?php echo $this->addHeader(); ?>
      </div>
 

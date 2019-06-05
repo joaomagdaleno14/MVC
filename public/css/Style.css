@@ -7,10 +7,14 @@
 body{
     width: 100%;
     height: 500px;
+    
 }
 .Header,.Main{
     float:left; 
     width: 100%;
+}
+.Main{
+    padding-left: 50px;
 }
 img{
     width:100%;
@@ -35,4 +39,7 @@ img{
     text-align: center;
     height: 50px;
     padding-top:10px;
+}
+.Nav a{
+    color:#fff;
 }
