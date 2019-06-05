@@ -17,7 +17,12 @@
         <a href="<?php echo DIRPAGE.'contato'?>">Contato</a>
     </div>
      <div class="Header">
-         <img src="<?php echo DIRIMG.'banner.jpg'?>" alt="Banner"><br>
+        <img src="<?php echo DIRIMG.'banner.jpg'?>" alt="Banner"><br>
+        <?php 
+            $Breadcrumb=new Src\Classes\ClassBreadcrumb();
+            $Breadcrumb->addBreadcrumb();
+        ?>
+        <br><br><hr>
         <?php echo $this->addHeader(); ?>
      </div>
 
