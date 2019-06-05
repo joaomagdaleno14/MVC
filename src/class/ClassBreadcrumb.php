@@ -9,14 +9,14 @@ class ClassBreadcrumb{
     public function addBreadcrumb(){
 
         $Contador=count($this->parseUrl());
-        
-        $ArrayLink[0]='';
 
+        $ArrayLink[0]='';
+        
         echo "<a href=".DIRPAGE.">home</a> > ";
 
         for($I=0; $I < $Contador; $I++){
             $ArrayLink[0].=$this->parseUrl()[$I].'/';
-
+            
             if($I < $Contador - 1){
                 echo " > ";
             }
