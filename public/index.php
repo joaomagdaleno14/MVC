@@ -7,4 +7,7 @@ require_once(DIRREQ."src/class/ClassRoutes.php");
 require_once(DIRREQ."src/class/ClassBreadcrumb.php");
 //$_SESSION['login']=false;
 
-$Dispach=new App\Dispach();
+//$Dispach=new App\Dispach();
+
+$n=new App\Model\ClassConexao();
+var_dump($n->conexaoDB());
