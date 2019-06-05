@@ -9,8 +9,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $this->getTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo DIRCSS.'Style.css' ?>">
+    <?php echo $this->addHead(); ?>
 </head>
 <body>
-     
+    <div class="Nav">
+        <a href="<?php echo DIRPAGE; ?>">Home</a>
+        <a href="<?php echo DIRPAGE.'contato'?>">Contato</a>
+    </div>
+     <div class="Header">
+         <img src="<?php echo DIRIMG.'banner.jpg'?>" alt="Banner"><br>
+         TEL:(XX)xxxxxxxx
+        <?php echo $this->addHeader(); ?>
+     </div>
+
+     <div class="Main">
+     <?php echo $this->addMain(); ?>
+     </div>
+
+     <div class="Footer">
+         2019 - Todos os direitos reservados Magdaleno <br>
+        <?php echo $this->addFooter(); ?>
+     </div>
 </body>
 </html>
