@@ -7,7 +7,7 @@ class ClassConexao{
     public function conexaoDB(){
 
         try{
-            $Con=new \PDO("mysql:host=".HOST.":dbname=".DB."","".USER."","".PASS."");
+            $Con=new \PDO("mysql:host=".HOST.";dbname=".DB."","".USER."","".PASS."");
             return $Con;
         }catch (\PDOExepcion $Erro){
             return $Erro-> getMessage();
