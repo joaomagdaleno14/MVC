@@ -23,3 +23,8 @@
     Cidade:<input type="text" name="Cidade" id="Cidade"><br>
     <input type="submit" value="Pesquisar">
 </form>
+
+<!--Responsavel por receber a table pesquisa-->
+<div class="Resultado" style="width: 100%; height:300px; background: green;">
+
+</div>

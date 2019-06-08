@@ -31,10 +31,18 @@ class ClassCadastro extends ClassConexao{
 
         $I=0;
         while($Fetch=$BFetch->fetch(\PDO::FETCH_ASSOC)){
-            $Array[$I]=['Nome'=>$Fetch['Nome'],'Sexo'=>$Fetch['Sexo'],'Cidade'=>$Fetch['Cidade']];
+            $Array[$I]=['ID'=>$Fetch['ID'],'Nome'=>$Fetch['Nome'],'Sexo'=>$Fetch['Sexo'],'Cidade'=>$Fetch['Cidade']];
             $I++;
         }
         return $Array;
+    }
+
+
+    #Deletar direto do banco
+    protected function deletarClientes($ID){
+        $BFetch=$this->Db=$this->conexaoDB()->prepare("delete from teste where ID=:ID");
+        $BFetch->bindParam(":ID",$ID,\PDO::PARAM_INT);
+        $BFetch->execute();
     }
 
 }
