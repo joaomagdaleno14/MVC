@@ -45,4 +45,14 @@ class ClassCadastro extends ClassConexao{
         $BFetch->execute();
     }
 
+    #Atualização direto do BD
+    protected function atualizarClientes($ID, $Nome, $Sexo, $Cidade){
+        $BFetch=$this->Db=$this->conexaoDB()->prepare("update test set  Nome=:Nome, Sexo=:Sexo, Cidade=:Cidade where ID=:ID");
+        $BFetch->bindParam(":ID",$ID,\PDO::PARAM_INT);
+        $BFetch->bindParam(":Nome",$Nome,\PDO::PARAM_STR);
+        $BFetch->bindParam(":Sexo",$Sexo,\PDO::PARAM_STR);
+        $BFetch->bindParam(":Cidade",$Cidade,\PDO::PARAM_STR);
+        $BFetch->execute();
+    }
+
 }

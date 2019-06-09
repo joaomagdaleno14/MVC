@@ -62,7 +62,7 @@ class ControllerCadastro extends ClassCadastro{
             foreach($B as $C){
                 echo "
                 <tr>
-                    <td><input type='checkbox' name='ID[]' id='ID' value='$C[ID]'</td>
+                    <td><input type='checkbox' name='ID[]' id='ID' value='$C[ID]'><img class='ImageEdit' rel='$C[ID]' src='".DIRIMG."edit.png' alt='Editar'></td>
                     <td>$C[Nome]</td>
                     <td>$C[Sexo]</td>
                     <td>$C[Cidade]</td>
@@ -86,5 +86,38 @@ class ControllerCadastro extends ClassCadastro{
         }
     }
     
+    #Puxando dados do BD
+    public function puxaDB($ID){
+        $this->recVariaveis();
+        $B=$this->selecionaClientes($this->Nome, $this->Sexo, $this->Cidade);
+
+        foreach($B as $C){
+            if($C['ID'] == $ID){
+                $Nome= $C['Nome'];
+                $Sexo= $C['Sexo'];
+                $Cidade= $C['Cidade'];
+            }
+        }
+
+        echo "
+        <form name='FormAtualizar' id='FormAtualizar' action='".DIRPAGE."cadastro/atualizar' method='post'>
+        <input type='hidden' name='ID' id='ID' value='{$ID}'><br>
+        Nome:<input type='text' name='Nome' id='Nome' value='$Nome'><br>
+        <select name='Sexo' id='Sexo'>
+            <option value='$Sexo'>$Sexo</option>
+            <option value='Masculino'>Masculino</option>
+            <option value='Feminino'>Feminino</option>
+        </select><br>
+        Cidade:<input type='text' name='Cidade' id='Cidade' value='$Cidade'><br>
+        <input type='submit' value='Atualizar'>
+            </form>
+        ";
+    }
+
+    public function atualizar(){
+        $this->recVariaveis();
+        $this->atualizarClientes($this->ID, $this->Nome, $this->Sexo, $this->Cidade);
+        echo "Usuário atualizado com sucesso!";
+    }
 
 }

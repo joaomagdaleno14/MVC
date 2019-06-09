@@ -26,5 +26,10 @@
 
 <!--Responsavel por receber a table pesquisa-->
 <div class="Resultado" style="width: 100%; height:300px; background: green;">
-
 </div>
+
+<br><br>
+<hr>
+<br><br>
+<h1>Formulario de atualizações</h1>
+<div class="ResultadoFormulario"></div>
