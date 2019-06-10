@@ -12,7 +12,7 @@ class ClassBreadcrumb{
 
         $ArrayLink[0]='';
         
-        echo "<a href=".DIRPAGE.">home</a> > ";
+        echo "<a href=".DIRPAGE.">home</a> >";
 
         for($I=0; $I < $Contador; $I++){
             $ArrayLink[0].=$this->parseUrl()[$I].'/';

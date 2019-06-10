@@ -22,6 +22,7 @@ class ClassRoutes{
             "contato"=>"ControllerContato",
             "cadastro"=>"ControllerCadastro",
             "login"=>"ControllerLogin"
+
         );
 
         if(array_key_exists($I,$this->Rota)){
