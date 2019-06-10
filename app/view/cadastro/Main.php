@@ -1,5 +1,6 @@
 <form name="FormCadastro" id="FormCadastro" action="<?php echo DIRPAGE.'cadastro/cadastrar';?>" method="post">
-    Nome:<input type="text" name="Nome" id="Nome"><br>
+    <div class="cadastro">
+    <input type="text" name="Nome" id="Nome" placeholder="Nome:" required><br>
     <select name="Sexo" id="Sexo">
         <option value="">Selecione...</option>
         <option value="Masculino">Masculino</option>
@@ -7,7 +8,10 @@
     </select><br>
     Cidade:<input type="text" name="Cidade" id="Cidade"><br>
     <input type="submit" value="Cadastrar">
+    </div>
 </form>
+
+
 <!-- <br><br>
 <hr>
 <br><br>
