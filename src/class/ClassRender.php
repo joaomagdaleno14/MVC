@@ -23,6 +23,12 @@ class ClassRender{
         include_once(DIRREQ."app/view/Layout.php");
     }
 
+    public function addNav(){
+        if(file_exists(DIRREQ."app/view/{$this->getDir()}/Nav.php")){
+            include(DIRREQ."app/view/{$this->getDir()}/Nav.php");
+        }
+    }
+
     #Adiciona caracteristicas especificas no head
     public function addHead(){
         if(file_exists(DIRREQ."app/view/{$this->getDir()}/Head.php")){

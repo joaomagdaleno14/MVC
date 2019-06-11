@@ -13,29 +13,21 @@
     <?php echo $this->addHead(); ?>
 </head>
 <body>
-    <div class="Nav">
-        <a href="<?php echo DIRPAGE; ?>">Home</a>
-        <a href="<?php echo DIRPAGE.'contato'?>">Contato</a>
-        <a href="<?php echo DIRPAGE.'cadastro'?>">Cadastro</a>
-        <a href="<?php echo DIRPAGE.'login'?>">Login</a>
+    <!-- <div class="Nav">
+    <?php echo $this->addNav(); ?>
+    </div> -->
+
+    <div class="Header">
+    <?php echo $this->addHeader(); ?>
     </div>
-     <div class="Header">
-        <img src="<?php echo DIRIMG.'banner.jpg'?>" alt="Banner"><br>
-        <?php 
-            $Breadcrumb=new Src\Classes\ClassBreadcrumb();
-            $Breadcrumb->addBreadcrumb();
-        ?>
-        <br><br><hr>
-        <?php echo $this->addHeader(); ?>
-     </div>
 
-     <div class="Main">
-     <?php echo $this->addMain(); ?>
-     </div>
+    <div class="Main">
+    <?php echo $this->addMain(); ?>
+    </div>
 
-     <div class="Footer">
-         2019 - Todos os direitos reservados Magdaleno <br>
-        <?php echo $this->addFooter(); ?>
-     </div>
+    <div class="Footer">
+        2019 - Todos os direitos reservados Magdaleno <br>
+    <?php echo $this->addFooter(); ?>
+    </div>
 </body>
 </html>
