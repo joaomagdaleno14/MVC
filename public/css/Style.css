@@ -1,9 +1,76 @@
+/*Sistema*/
 *{
     margin: 0;
     padding: 0;
-    border: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
+a{text-decoration: none; color: #333;}
+
+/*Classes auxiliares*/
+.float{
+    float:left;
+}
+
+.w100{
+    width: 100%;
+}
+
+.h40{
+    height: 40px;
+}
+
+.center{
+    text-align: center;
+}
+
+/*Configurações Gerais*/
+input[type='email'],input[type='password']{ 
+    margin: 15px 0;
+    border: 1px solid #bbb; 
+    border-radius: 2px; 
+    font-size: 16px; 
+    padding: 0 10px; 
+}
+input[type='submit']{ 
+    width: 30%;
+    background: #117190; 
+    font-weight: bold; 
+    color: #fff; 
+    border: none; 
+    border-radius: 2px; 
+    cursor:pointer; 
+}
+input[type='submit']:hover{ 
+    opacity: 0.8;
+}
+
+.fundo{ 
+    position:absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: url('../img/books.jpg') center center no-repeat; 
+    background-size: cover; 
+}
+
+.login{ 
+    position: absolute; 
+    width: 20%; 
+    top: 50%; 
+    left: 50%; 
+    margin-right: -50%; 
+    transform: translate(-50%,-50%); 
+    background: #fff;
+    padding: 30px;
+    border-radius: 2px; 
+}
+    
+    .loginTextos{ 
+        width: 80%; 
+        font-weight: bold; 
+        line-height:40px; }
 
 @media screen and (max-width: 480px){
 
@@ -18,34 +85,8 @@
 }
 
 @media screen and (min-width: 1200px){
-    input[type='email'],input[type='password']{
-        
-    }
 
-    .fundo{
-        position: absolute;
-        top:0;
-        left:0;
-        width: 100%;
-        height:100%;
-        background: url('/public/img/books.jpg') center center no-repeat;
-        background-size: cover;
-    }
-    
-    .login{
-        position: absolute;
-        width: 30%;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%,-50%);
-        background: #fff;
-        padding:30px;
-    }
-    .loginForm{
-        float:left;
-        width:100%;
-    }
+
 }
 
 body{
@@ -67,7 +108,7 @@ img{
 
 .Footer{
     position:absolute;
-    top:1000px;
+    top:100%;
     width: 100%;
     height: 50px;
     background:#8eb5e4;

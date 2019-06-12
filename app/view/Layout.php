@@ -13,9 +13,9 @@
     <?php echo $this->addHead(); ?>
 </head>
 <body>
-    <!-- <div class="Nav">
+    <div class="Nav">
     <?php echo $this->addNav(); ?>
-    </div> -->
+    </div>
 
     <div class="Header">
     <?php echo $this->addHeader(); ?>
@@ -26,7 +26,6 @@
     </div>
 
     <div class="Footer">
-        2019 - Todos os direitos reservados Magdaleno <br>
     <?php echo $this->addFooter(); ?>
     </div>
 </body>
