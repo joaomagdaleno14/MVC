@@ -2,7 +2,7 @@
 <form name="FormLogin" id="FormLogin" action="<?php echo DIRPAGE.'login/validarLogin' ?>" method="post">
     <div class="login">
         <div class="loginLogo">
-            <img src="<?php echo DIRPAGE.'img/logo.png'; ?>" alt="Logo">
+            <img src="<?php echo DIRPAGE.'img/logos/Logo1-Angel'; ?>" alt="Logo">
         </div>
 
         <div class="loginForm">
