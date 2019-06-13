@@ -51,13 +51,13 @@ input[type='submit']:hover{
     left: 0; 
     width: 100%; 
     height: 100%; 
-    background: url('../img/books.jpg') center center no-repeat; 
+    background: url('../img/books-L.jpg') center center no-repeat; 
     background-size: cover; 
 }
 
 .login{ 
     position: absolute; 
-    width: 20%; 
+    width: 30%; 
     top: 50%; 
     left: 50%; 
     margin-right: -50%; 
@@ -70,24 +70,85 @@ input[type='submit']:hover{
     .loginTextos{ 
         width: 80%; 
         font-weight: bold; 
-        line-height:40px; }
+        line-height:40px; 
+    }
 
+
+/* Extra-Small */
 @media screen and (max-width: 480px){
+input[type='submit']{ 
+    width: 70%;
+}
+
+.fundo{ 
+    background: url('../img/books-XS.jpg') center center no-repeat; 
+    background-size: cover; 
+}
+
+.login{ 
+    width: 90%; 
+}
+    
+    .loginTextos{  
+        margin-top: 10px; 
+        text-align: left;
+    }
+
 
 }
 
+
+/* Small */
 @media screen and (min-width: 481px) and (max-width: 768px){
-    
+input[type='submit']{ 
+    width: 40%;
 }
 
+.fundo{  
+    background: url('../img/books-S.jpg') center center no-repeat; 
+    background-size: cover; 
+}
+
+.login{ 
+    width: 60%; 
+}
+    
+    .loginTextos{ 
+        width: 60%;  
+    }
+
+
+}
+
+
+/* Medium */
 @media screen and (min-width: 769px) and (max-width: 1199px){
-    
+input[type='submit']{ 
+    width: 40%;
 }
 
+.fundo{ 
+    background: url('../img/books-M.jpg') center center no-repeat; 
+    background-size: cover; 
+}
+
+.login{
+    width: 40%; 
+}
+    
+    .loginTextos{ 
+        width: 60%;
+    }
+
+
+}
+
+
+/* Large */
 @media screen and (min-width: 1200px){
 
-
 }
+
 
 body{
     width: 100%;

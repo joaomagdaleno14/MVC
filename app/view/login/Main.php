@@ -1,8 +1,8 @@
 <div class="fundo"></div>
 <form name="FormLogin" id="FormLogin" action="<?php echo DIRPAGE.'login/validarLogin' ?>" method="post">
     <div class="login">
-        <div class="loginLogo">
-            <img src="<?php echo DIRPAGE.'img/logos/Logo1-Angel'; ?>" alt="Logo">
+        <div class="loginLogo float w100 ">
+            <img src="<?php echo DIRPAGE.'img/logos/Logo1-Angel.php'; ?>" alt="Logo">
         </div>
 
         <div class="loginForm">
