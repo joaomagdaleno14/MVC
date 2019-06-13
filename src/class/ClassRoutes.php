@@ -18,7 +18,11 @@ class ClassRoutes{
             ""=>"ControllerHome",
             "home"=>"ControllerHome",
             "sitemap"=>"ControllerSitemap",
-            "carro"=>"ControllerCarro"
+            "carro"=>"ControllerCarro",
+            "contato"=>"ControllerContato",
+            "cadastro"=>"ControllerCadastro",
+            "login"=>"ControllerLogin"
+
         );
 
         if(array_key_exists($I,$this->Rota)){

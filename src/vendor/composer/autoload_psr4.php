@@ -9,6 +9,7 @@ return array(
     'Traits\\' => array($baseDir . '/../traits'),
     'Src\\' => array($baseDir . '/'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'Model\\' => array($baseDir . '/../Model'),
     'Interfaces\\' => array($baseDir . '/../Interfaces'),
     'Classes\\' => array($baseDir . '/../class'),
     'App\\' => array($baseDir . '/../app'),

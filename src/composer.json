@@ -1,5 +1,6 @@
 {
     "name": "magdaleno/mvc",
+    "description": "",
     "authors": [
         {
             "name": "João Magdaleno",
@@ -15,7 +16,8 @@
             "App\\":"../app/",
             "Traits\\":"../traits/",
             "Src\\":"../src/",
-            "Interfaces\\":"../Interfaces"
+            "Interfaces\\":"../Interfaces/",
+            "Model\\":"../Model/"
         }
     }
 }

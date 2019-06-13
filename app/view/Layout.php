@@ -1,3 +1,4 @@
+<?php include_once (DIRREQ."/src/class/ClassBreadcrumb.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,8 +10,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $this->getTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo DIRCSS.'Style.css' ?>">
+    <?php echo $this->addHead(); ?>
 </head>
 <body>
-     
+    <div class="Nav">
+    <?php echo $this->addNav(); ?>
+    </div>
+
+    <div class="Header">
+    <?php echo $this->addHeader(); ?>
+    </div>
+
+    <div class="Main">
+    <?php echo $this->addMain(); ?>
+    </div>
+    <footer id="footer">
+        <div class="Footer">
+        <?php echo $this->addFooter(); ?>
+        </div>
+    </footer>
 </body>
 </html>
