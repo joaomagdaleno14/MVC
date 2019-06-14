@@ -25,9 +25,7 @@
     <?php echo $this->addMain(); ?>
     </div>
     <footer id="footer">
-        <div class="Footer">
         <?php echo $this->addFooter(); ?>
-        </div>
     </footer>
 </body>
 </html>
