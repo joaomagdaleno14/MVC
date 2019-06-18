@@ -13,7 +13,7 @@
     <input class="h40 float w100" type="password" name="Senha" id="Senha" placeholder="Senha:" required><br>
     <input class="h40 float w100" type="password" name="SenhaConf" id="SenhaConf" placeholder="Confirmação da Senha:" required><br>
     <input class="h40 floatR center" type="submit" value="Cadastrar">
-    <div class="loginTextos float ">Já tem conta? <a href="<?php echo DIRPAGE.'cadastro/cadastro';?>">Faça o login</a></div>
+    <div class="loginTextos float ">Já tem conta? <a href="<?php echo DIRPAGE.'login';?>">Faça o login</a></div>
     </div>
 </form>
 

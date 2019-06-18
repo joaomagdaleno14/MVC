@@ -12,7 +12,7 @@
             <input class="h40 float w100" type="password" name="Senha" id="Senha" placeholder="Senha:" required><br>
             <input class="h40 floatR center" type="submit" value="Entrar">
             <div class="loginTextos float "><a href="<?php echo DIRPAGE.'login/esquecisenha';?>"> Esqueci minha senha</a></div>
-            <div class="loginTextos float ">Não tem uma conta? <a href="<?php echo DIRPAGE.'cadastro/cadastro';?>">Crie uma!</a></div>
+            <div class="loginTextos float ">Não tem uma conta? <a href="<?php echo DIRPAGE.'cadastro';?>">Crie uma!</a></div>
         </div>
     </div>
 </form>
