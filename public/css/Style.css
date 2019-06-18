@@ -162,18 +162,18 @@ body{
     background-color:#f7f7f7;
     
 }
-.Header,.Main{
+header,main{
     float:left; 
     width: 100%;
 }
-.Main{
+main{
     padding-left: 50px;
 }
 img{
     width:100%;
 }
 
-#footer{
+#Footer{
     position:absolute;
     top:100%;
     width: 100%;
@@ -184,7 +184,7 @@ img{
     text-align: center;
     font-size: 20px;
 }
-.Nav{
+#Nav{
     float:left;
     width: 100%;
     background: #8eb5e4;
@@ -193,7 +193,7 @@ img{
     height: 50px;
     padding-top:10px;
 }
-.Nav a{
+#Nav a{
     color:#fff;
 }
 

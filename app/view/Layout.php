@@ -13,19 +13,21 @@
     <?php echo $this->addHead(); ?>
 </head>
 <body>
-    <div class="Nav">
-    <?php echo $this->addNav(); ?>
-    </div>
+    <nav>
+        <?php echo $this->addNav(); ?>
+    </nav>
 
-    <div class="Header">
-    <?php echo $this->addHeader(); ?>
-    </div>
+    <header>
+        <?php echo $this->addHeader(); ?>
+    </header>
 
-    <div class="Main">
-    <?php echo $this->addMain(); ?>
-    </div>
-    <footer id="footer">
+   <main>
+        <?php echo $this->addMain(); ?>
+   </main>
+
+    <footer>
         <?php echo $this->addFooter(); ?>
     </footer>
+    
 </body>
 </html>
