@@ -18,7 +18,6 @@ class ClassRoutes{
             ""=>"ControllerHome",
             "home"=>"ControllerHome",
             "sitemap"=>"ControllerSitemap",
-            "carro"=>"ControllerCarro",
             "contato"=>"ControllerContato",
             "cadastro"=>"ControllerCadastro",
             "login"=>"ControllerLogin"

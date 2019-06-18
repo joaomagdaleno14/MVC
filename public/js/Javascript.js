@@ -31,4 +31,62 @@ $(document).ready(function(){
         });
     });
 
+    $("#FormAvaliacoes").on('submit',function(event){
+        event.preventDefault();
+        var Dados=$(this).serialize();
+    
+        $.ajax({
+            url: 'controller/ControllerAvaliacao.php',
+            method: 'post',
+            dataType: 'html',
+            data: Dados,
+            success: function(Dados){
+                $('.Resultado').show().html(Dados);
+            }
+        })
+    
+    });
+
+    $('.Deletar').on('click',function(envent){
+        event.preventDefault();
+    
+        var Link=$(this).attr('href');
+        if (confirm("Deseja realmente deletar esse dado?")) {
+            event.preventDefault();
+            var Dados=$(this).serialize();
+        
+            $.ajax({
+                url: 'controller/ControllerDelete-adm.php',
+                method: 'post',
+                dataType: 'html',
+                data: Dados,
+                success: function(Dados){
+                    $('.Resultado').show().html(Dados);
+                }
+            })
+        }else{
+            return false;
+        }
+        
+    });
+
+    $("#FormCadastro").on('submit',function(event){
+        event.preventDefault();
+        var Dados=$(this).serialize();
+    
+        $.ajax({
+            url: 'controller/ControllerCadastro-adm.php',
+            method: 'post',
+            dataType: 'html',
+            data: Dados,
+            success: function(Dados){
+                $('.Resultado').show().html(Dados);
+            }
+        })
+    
+    });
+
+    
+
 });
+
