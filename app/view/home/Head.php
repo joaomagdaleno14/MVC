@@ -1,1 +1,2 @@
-<meta name="jjdjsjd" content="sdhahsdha"> 
+<link rel="stylesheet" href="<?php echo DIRPAGE.'public/OwlCarousel/dist/assets/owl.carousel.min.css' ?>">
+<link rel="stylesheet" href="<?php echo DIRPAGE.'public/OwlCarousel/dist/assets/owl.theme.default.min.css' ?>">
