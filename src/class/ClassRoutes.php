@@ -20,7 +20,11 @@ class ClassRoutes{
             "sitemap"=>"ControllerSitemap",
             "contato"=>"ControllerContato",
             "cadastro"=>"ControllerCadastro",
-            "login"=>"ControllerLogin"
+            "login"=>"ControllerLogin",
+            "cadastro-livros-adm"=>"ControllerCadastro-livros-adm",
+            "cadastro-editoras-adm"=>"ControllerCadastro-editoras-adm",
+            "cadastro-autores-adm"=>"ControllerCadastro-autores-adm",
+
 
         );
 
