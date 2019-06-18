@@ -7,9 +7,11 @@
     </div>
     <h1>Cadastrar</h1>
     <input class="h40 float w100" type="text" name="Nome" id="Nome" placeholder="Nome:" required><br>
-    <input class="h40 float w100" type="email" id="Email" name="Email" placeholder="Email:" required><br>
+    <input class="h40 float w100" type="text" name="Sobrenome" id="Sobrenome" placeholder="Sobrenome:" required><br>
     <input class="h40 float w100" type="text" name="CPF" id="CPF" placeholder="CPF:" required><br>
     <input class="h40 float w100" type="date" name="Dt_Nascimento" id="Dt_Nascimento" placeholder="Data de Nascimento:" required><br>
+    <input class="h40 float w100" type="text" name="Telefone" id="Telefone" placeholder="Telefone:" required><br>
+    <input class="h40 float w100" type="email" id="Email" name="Email" placeholder="Email:" required><br>
     <input class="h40 float w100" type="password" name="Senha" id="Senha" placeholder="Senha:" required><br>
     <input class="h40 float w100" type="password" name="SenhaConf" id="SenhaConf" placeholder="Confirmação da Senha:" required><br>
     <input class="h40 floatR center" type="submit" value="Cadastrar">
