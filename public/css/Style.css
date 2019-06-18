@@ -26,7 +26,7 @@ a{text-decoration: none; color: #0067b0;}
 }
 
 /*Configurações Gerais*/
-input[type='email'],input[type='password']{ 
+input[type='email'],input[type='password'],input[type='text'],input[type='date']{ 
     margin: 15px 0;
     border: 1px solid #bbb; 
     border-radius: 2px; 
@@ -60,7 +60,7 @@ h1{
     background-size: cover; 
 }
 
-.login{ 
+.login, .cadastro{ 
     position: absolute; 
     width: 35%;
     top: 50%; 
@@ -163,7 +163,7 @@ body{
     
 }
 header,main{
-    float:left; 
+    float: left; 
     width: 100%;
 }
 main{
@@ -171,6 +171,11 @@ main{
 }
 img{
     width:100%;
+}
+
+.Footer{
+    width: 100%;
+    height: 50px;
 }
 
 #Footer{
