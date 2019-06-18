@@ -3,7 +3,7 @@
     <div class="login">
 
         <div class="Logo float ">
-            <img src="<?php echo DIRPAGE.'public/img/Logo0-frayHord-B-G.png'; ?>" alt="Logo">
+            <img src="<?php echo DIRPAGE.'public/img/Logo0-frayHord-B-G.svg'; ?>" alt="Logo">
         </div>
 
         <h1>Entrar</h1>
