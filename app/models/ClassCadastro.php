@@ -1,7 +1,7 @@
 <?php
-namespace App\Model;
+namespace App\Models;
 
-use App\Model\ClassConexao;
+use App\Models\ClassConexao;
 
 class ClassCadastro extends ClassConexao{
     

@@ -17,7 +17,7 @@
             "Traits\\":"../traits/",
             "Src\\":"../src/",
             "Interfaces\\":"../Interfaces/",
-            "Model\\":"../Model/"
+            "Models\\":"../Models/"
         }
     }
 }

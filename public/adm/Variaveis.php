@@ -1,7 +1,11 @@
 <?php
-if (isset($_POST['Acao'])){ $Acao=filter_input(INPUT_POST, 'Acao', FILTER_SANITIZE_SPECIAL_CHARS);}elseif (isset($_GET['Acao'])) {$Acao=filter_input(INPUT_GET, 'Acao', FILTER_SANITIZE_SPECIAL_CHARS);}else{$Acao="";}
-if (isset($_POST['ID'])){ $ID=filter_input(INPUT_POST, 'ID', FILTER_SANITIZE_SPECIAL_CHARS);}elseif (isset($_GET['ID'])) {$ID=filter_input(INPUT_GET, 'ID', FILTER_SANITIZE_SPECIAL_CHARS);}else{$ID=0;}
-if (isset($_POST['Nome'])){ $Nome=filter_input(INPUT_POST, 'Nome', FILTER_SANITIZE_SPECIAL_CHARS);}elseif (isset($_GET['Nome'])) {$Nome=filter_input(INPUT_GET, 'Nome', FILTER_SANITIZE_SPECIAL_CHARS);}else{$Nome="";}
-if (isset($_POST['Sexo'])){ $Sexo=filter_input(INPUT_POST, 'Sexo', FILTER_SANITIZE_SPECIAL_CHARS);}elseif (isset($_GET['Sexo'])) {$Sexo=filter_input(INPUT_GET, 'Sexo', FILTER_SANITIZE_SPECIAL_CHARS);}else{$Sexo="";}
-if (isset($_POST['Cidade'])){ $Cidade=filter_input(INPUT_POST, 'Cidade', FILTER_SANITIZE_SPECIAL_CHARS);}elseif (isset($_GET['Cidade'])) {$Cidade=filter_input(INPUT_GET, 'Cidade', FILTER_SANITIZE_SPECIAL_CHARS);}else{$Cidade="";}
-if (isset($_POST['Radio'])){ $Radio=filter_input(INPUT_POST, 'Radio', FILTER_SANITIZE_SPECIAL_CHARS);}elseif (isset($_GET['Radio'])) {$Radio=filter_input(INPUT_GET, 'Radio', FILTER_SANITIZE_SPECIAL_CHARS);}else{$Radio="";}
+if(isset($_POST['ID'])){$this->ID=$_POST['ID'];}
+if(isset($_POST['Nome'])){$this->Nome=filter_input(INPUT_POST, 'Nome',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+if(isset($_POST['Sobrenome'])){$this->Sobrenome=filter_input(INPUT_POST, 'Sobrenome',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+if(isset($_POST['CPF'])){$this->CPF=filter_input(INPUT_POST, 'CPF',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+if(isset($_POST['Dt_Nascimento'])){$this->Dt_Nascimento=filter_input(INPUT_POST, 'Dt_Nascimento',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+if(isset($_POST['Telefone'])){$this->Telefone=filter_input(INPUT_POST, 'Telefone',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+if(isset($_POST['Email'])){$this->Email=filter_input(INPUT_POST, 'Email',FILTER_VALIDATE_EMAIL);}
+if(isset($_POST['Senha'])){$this->Senha=$_POST['Senha']; $this->hashSenha='';}
+if(isset($_POST['SenhaConf'])){$this->SenhaConf=$_POST['SenhaConf'];}
+$token=bin2hex(random_bytes(64));

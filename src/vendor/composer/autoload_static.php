@@ -21,7 +21,7 @@ class ComposerStaticInit9b3ade21cf0c12676cd73a83f61c5e59
         ),
         'M' => 
         array (
-            'Model\\' => 6,
+            'Models\\' => 7,
         ),
         'I' => 
         array (
@@ -50,9 +50,9 @@ class ComposerStaticInit9b3ade21cf0c12676cd73a83f61c5e59
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
-        'Model\\' => 
+        'Models\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../Model',
+            0 => __DIR__ . '/../..' . '/../Models',
         ),
         'Interfaces\\' => 
         array (

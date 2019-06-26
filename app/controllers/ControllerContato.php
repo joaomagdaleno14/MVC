@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 //session_start();
 include_once("../src/class/ClassRender.php");
 include_once("../src/interfaces/InterfaceView.php");

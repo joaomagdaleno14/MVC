@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 //session_start();
 include_once(DIRREQ."/src/class/ClassRender.php");
-include_once(DIRREQ."/app/model/ClassCadastro.php");
+include_once(DIRREQ."/app/models/ClassCadastro.php");
 include_once(DIRREQ."/src/Traits/TraitUrlParser.php");
 use \Src\Classes\ClassRender;
-use \App\Model\ClassCadastro;
+use \App\Models\ClassCadastro;
 
 
 class ControllerCadastro extends ClassCadastro{
@@ -19,6 +19,8 @@ class ControllerCadastro extends ClassCadastro{
     protected $Telefone;
     protected $Email;
     protected $Senha;
+    protected $hashSenha;
+    protected $SenhaConf;
 
     use \Src\Traits\TraitUrlParser;
     
@@ -34,16 +36,6 @@ class ControllerCadastro extends ClassCadastro{
         }
     }
     #Receber as variaveis 
-    public function recVariaveis(){
-        if(isset($_POST['ID'])){$this->ID=$_POST['ID'];}
-        if(isset($_POST['Nome'])){$this->Nome=filter_input(INPUT_POST, 'Nome',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['Sobrenome'])){$this->Sobrenome=filter_input(INPUT_POST, 'Sobrenome',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['CPF'])){$this->CPF=filter_input(INPUT_POST, 'CPF',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['Dt_Nascimento'])){$this->Dt_Nascimento=filter_input(INPUT_POST, 'Dt_Nascimento',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['Telefone'])){$this->Telefone=filter_input(INPUT_POST, 'Telefone',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['Email'])){$this->Email=filter_input(INPUT_POST, 'Email',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['Senha'])){$this->Senha=filter_input(INPUT_POST, 'Senha',FILTER_SANITIZE_SPECIAL_CHARS);}
-    }
 
     #chamar o metodo de cadastro da class
     public function cadastrar(){

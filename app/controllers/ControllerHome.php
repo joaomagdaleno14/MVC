@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller;
+namespace App\Controllers;
 include_once("../src/class/ClassRender.php");
 include_once("../src/interfaces/InterfaceView.php");
 use Src\Classes\ClassRender;

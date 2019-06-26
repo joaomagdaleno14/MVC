@@ -1,7 +1,7 @@
 <?php
-namespace Model;
+namespace Models;
 include("{$_SERVER['DOCUMENT_ROOT']}/SistemaDentista/Class/ClassConexao.php");
-use App\Model\ClassConexao;
+use App\Models\ClassConexao;
 
 class ClassCrud extends ClassConexao{
     private $Crud;
@@ -45,8 +45,8 @@ class ClassCrud extends ClassConexao{
     }
 
     //Deleção de dados
-    public function DeleteDB($Table, $Values, $Parametros){
-        $this->preparedStatements("delete from {$Table} where {$Values}", $Parametros);
+    public function DeleteDB($Table, $Where, $Parametros){
+        $this->preparedStatements("delete from {$Table} where {$Where}", $Parametros);
         return $this->Crud;
     }
 }

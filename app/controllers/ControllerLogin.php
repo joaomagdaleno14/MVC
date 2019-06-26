@@ -1,7 +1,7 @@
 <?php
-namespace App\Controller;
+namespace App\Controllers;
 include_once (DIRREQ."/src/class/ClassRender.php");
-use App\Model\ClassLogin;
+use App\Models\ClassLogin;
 use \Src\Classes\ClassRender;
 
 class ControllerLogin extends ClassLogin{
