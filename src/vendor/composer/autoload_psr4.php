@@ -11,6 +11,7 @@ return array(
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Models\\' => array($baseDir . '/../Models'),
     'Interfaces\\' => array($baseDir . '/../Interfaces'),
+    'Controllers\\' => array($baseDir . '/../controllers'),
     'Classes\\' => array($baseDir . '/../class'),
     'App\\' => array($baseDir . '/../app'),
 );

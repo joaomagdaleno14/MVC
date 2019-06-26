@@ -1,6 +1,6 @@
 <?php
 namespace Models;
-include("{$_SERVER['DOCUMENT_ROOT']}/SistemaDentista/Class/ClassConexao.php");
+include(DIRREQ."/app/models/ClassConexao.php");
 use App\Models\ClassConexao;
 
 class ClassCrud extends ClassConexao{

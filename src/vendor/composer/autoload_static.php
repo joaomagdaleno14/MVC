@@ -29,6 +29,7 @@ class ComposerStaticInit9b3ade21cf0c12676cd73a83f61c5e59
         ),
         'C' => 
         array (
+            'Controllers\\' => 12,
             'Classes\\' => 8,
         ),
         'A' => 
@@ -57,6 +58,10 @@ class ComposerStaticInit9b3ade21cf0c12676cd73a83f61c5e59
         'Interfaces\\' => 
         array (
             0 => __DIR__ . '/../..' . '/../Interfaces',
+        ),
+        'Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/../controllers',
         ),
         'Classes\\' => 
         array (

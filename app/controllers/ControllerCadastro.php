@@ -5,9 +5,9 @@ namespace App\Controllers;
 include_once(DIRREQ."/src/class/ClassRender.php");
 include_once(DIRREQ."/app/models/ClassCadastro.php");
 include_once(DIRREQ."/src/Traits/TraitUrlParser.php");
+include_once(DIRREQ."/src/class/ClassValidate.php");
 use \Src\Classes\ClassRender;
 use \App\Models\ClassCadastro;
-
 
 class ControllerCadastro extends ClassCadastro{
 
@@ -21,6 +21,8 @@ class ControllerCadastro extends ClassCadastro{
     protected $Senha;
     protected $hashSenha;
     protected $SenhaConf;
+    protected $token;
+
 
     use \Src\Traits\TraitUrlParser;
     
@@ -35,11 +37,30 @@ class ControllerCadastro extends ClassCadastro{
             $Render->renderLayout();
         }
     }
-    #Receber as variaveis 
+//     #Receber as variaveis 
+    public function recVariaveis(){
+        if(isset($_POST['ID'])){$this->ID=$_POST['ID'];}
+        if(isset($_POST['Nome'])){$this->Nome=filter_input(INPUT_POST, 'Nome',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+        if(isset($_POST['Sobrenome'])){$this->Sobrenome=filter_input(INPUT_POST, 'Sobrenome',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+        if(isset($_POST['CPF'])){$this->CPF=filter_input(INPUT_POST, 'CPF',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+        if(isset($_POST['Dt_Nascimento'])){$this->Dt_Nascimento=filter_input(INPUT_POST, 'Dt_Nascimento',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+        if(isset($_POST['Telefone'])){$this->Telefone=filter_input(INPUT_POST, 'Telefone',FILTER_SANITIZE_FULL_SPECIAL_CHARS);}
+        if(isset($_POST['Email'])){$this->Email=filter_input(INPUT_POST, 'Email',FILTER_VALIDATE_EMAIL);}
+        if(isset($_POST['Senha'])){$this->Senha=$_POST['Senha']; $this->hashSenha='';}
+        if(isset($_POST['SenhaConf'])){$this->SenhaConf=$_POST['SenhaConf'];}
+        $this->token=bin2hex(random_bytes(64));
+    }
+
 
     #chamar o metodo de cadastro da class
     public function cadastrar(){
         $this->recVariaveis();
+        $validate=new \Classes\ClassValidate();
+        $validate->validateFields(array($_POST));
+        $validate->validateEmail($this->Email);
+        //$validate->validateData($this->Dt_Nascimento);
+        $validate->validateCPF($this->CPF);
+        var_dump($validate->getErro());
         parent::cadastroClientes($this->Nome, $this->Sobrenome, $this->CPF, $this->Dt_Nascimento, $this->Telefone, $this->Email, $this->Senha);
         echo "Cadastro realizado com sucesso!";
     }
@@ -120,5 +141,5 @@ class ControllerCadastro extends ClassCadastro{
     //     $this->atualizarClientes($this->ID, $this->Nome, $this->Sexo, $this->Cidade);
     //     echo "Usuário atualizado com sucesso!";
     // }
-
 }
+

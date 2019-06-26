@@ -16,13 +16,13 @@ class Dispach extends ClassRoutes{
 
     #Método Construtor
     public function __construct(){
-        self::addController();
+        self::addControllers();
     }
 
     #Método de adição do controller
-    private function addController(){
+    private function addControllers(){
         $RotaController=$this->getRota();
-        $NameS="App\\Controller\\{$RotaController}";
+        $NameS="App\\Controllers\\{$RotaController}";
         $this->Obj=new $NameS;
 
         if(isset($this->parseUrl()[1])){

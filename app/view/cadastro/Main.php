@@ -1,5 +1,5 @@
 <div class="fundo" id="main"></div>
-<form name="FormCadastro" id="FormCadastro" action="<?php echo DIRPAGE.'cadastro/cadastrar';?>" method="post">
+<form name="FormCadastro" id="FormCadastro" action="<?php echo DIRPAGE.'cadastroCrud/cadastrar';?>" method="post">
     <div class="cadastro">
 
     <!-- <div class="Logo floatR ">
