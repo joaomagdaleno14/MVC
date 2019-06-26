@@ -1,55 +1,52 @@
 <?php
-include("{$_SERVER['DOCUMENT_ROOT']}/Exemplo/PDO/Class/ClassConexao.php");
-class ClassCrud extends ClassConexao{
+namespace Model;
+include("{$_SERVER['DOCUMENT_ROOT']}/SistemaDentista/Class/ClassConexao.php");
+use App\Model\ClassConexao;
 
-    #Atributos
-     private $Crud;
-     private $Contador;
+class ClassCrud extends ClassConexao{
+    private $Crud;
+    private $Contador;
 
      #Preparação das declarações
-    private function preparedStatements($Query, $Parametros )
-    {
+    private function preparedStatements($Query, $Parametros){
         $this->countParametros($Parametros);
-        $this->Crud=$this->conectaDB()->prepare($Query);
+        $this->Crud=$this->conexaoDB()->prepare($Query);
         
         if($this->Contador > 0){
             for($I=1; $I <= $this->Contador; $I++){
                 $this->Crud->bindValue($I,$Parametros[$I-1]);
             }   
         }
-
         $this->Crud->execute();
     }
 
-    #Contador de parametros
-    private function countParametros($Parametros)
-    {
-        $this->Contador=count($Parametros);
-    }
-
-    #Insert no banco de dados
-    public function insertDB($Tabela, $Condicao, $Parametros)
-    {
-       $this->preparedStatements("insert into {$Tabela} values({$Condicao})", $Parametros);
-       return $this->Crud;
-    }
-
-     #Select no banco de dados
-     public function selectDB($Campos, $Tabela, $Condicao, $Parametros)
+     #Contador de parametros
+     private function countParametros($Parametros)
      {
-        $this->preparedStatements("select {$Campos} from {$Tabela} {$Condicao}", $Parametros);
-        return $this->Crud;
+         $this->Contador=count($Parametros);
      }
 
-     #Delete no banco de dados
-     public function deleteDB($Tabela, $Condicao, $Parametros){
-         $this->preparedStatements("delete from {$Tabela} where {$Condicao}", $Parametros);
+    //Inserção de dados
+    public function InsertDB($Table, $Values, $Parametros){
+         $this->preparedStatements("insert into {$Table} values ({$Values})", $Parametros);
          return $this->Crud;
-     }
+    }
 
-     #Update no banco de dados
-     public function updateDB($Tabela, $Set, $Condicao, $Parametros){
-        $this->preparedStatements("update {$Tabela} set {$Set} where {$Condicao}", $Parametros);
+    //Seleção de dados
+    public function SelectDB($Fields,$Table, $Where, $Parametros){
+        $this->preparedStatements("select {$Fields} from {$Table} {$Where}", $Parametros);
+        return $this->Crud;
+    }
+
+    //Atualização de dados
+    public function UpdateDB($Table, $Values, $Where, $Parametros){
+        $this->preparedStatements("update {$Table} set {$Values} where {$Where}", $Parametros);
+        return $this->Crud;
+    }
+
+    //Deleção de dados
+    public function DeleteDB($Table, $Values, $Parametros){
+        $this->preparedStatements("delete from {$Table} where {$Values}", $Parametros);
         return $this->Crud;
     }
 }

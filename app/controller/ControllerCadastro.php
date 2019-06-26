@@ -13,8 +13,12 @@ class ControllerCadastro extends ClassCadastro{
 
     protected $ID;
     protected $Nome;
-    protected $Sexo;
-    protected $Cidade;
+    protected $Sobrenome;
+    protected $CPF;
+    protected $Dt_Nascimento;
+    protected $Telefone;
+    protected $Email;
+    protected $Senha;
 
     use \Src\Traits\TraitUrlParser;
     
@@ -33,14 +37,18 @@ class ControllerCadastro extends ClassCadastro{
     public function recVariaveis(){
         if(isset($_POST['ID'])){$this->ID=$_POST['ID'];}
         if(isset($_POST['Nome'])){$this->Nome=filter_input(INPUT_POST, 'Nome',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['Sexo'])){$this->Sexo=filter_input(INPUT_POST, 'Sexo',FILTER_SANITIZE_SPECIAL_CHARS);}
-        if(isset($_POST['Cidade'])){$this->Cidade=filter_input(INPUT_POST, 'Cidade',FILTER_SANITIZE_SPECIAL_CHARS);}
+        if(isset($_POST['Sobrenome'])){$this->Sobrenome=filter_input(INPUT_POST, 'Sobrenome',FILTER_SANITIZE_SPECIAL_CHARS);}
+        if(isset($_POST['CPF'])){$this->CPF=filter_input(INPUT_POST, 'CPF',FILTER_SANITIZE_SPECIAL_CHARS);}
+        if(isset($_POST['Dt_Nascimento'])){$this->Dt_Nascimento=filter_input(INPUT_POST, 'Dt_Nascimento',FILTER_SANITIZE_SPECIAL_CHARS);}
+        if(isset($_POST['Telefone'])){$this->Telefone=filter_input(INPUT_POST, 'Telefone',FILTER_SANITIZE_SPECIAL_CHARS);}
+        if(isset($_POST['Email'])){$this->Email=filter_input(INPUT_POST, 'Email',FILTER_SANITIZE_SPECIAL_CHARS);}
+        if(isset($_POST['Senha'])){$this->Senha=filter_input(INPUT_POST, 'Senha',FILTER_SANITIZE_SPECIAL_CHARS);}
     }
 
     #chamar o metodo de cadastro da class
     public function cadastrar(){
         $this->recVariaveis();
-        parent::cadastroClientes($this->Nome, $this->Sexo, $this->Cidade);
+        parent::cadastroClientes($this->Nome, $this->Sobrenome, $this->CPF, $this->Dt_Nascimento, $this->Telefone, $this->Email, $this->Senha);
         echo "Cadastro realizado com sucesso!";
     }
 

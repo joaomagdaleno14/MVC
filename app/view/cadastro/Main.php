@@ -2,20 +2,24 @@
 <form name="FormCadastro" id="FormCadastro" action="<?php echo DIRPAGE.'cadastro/cadastrar';?>" method="post">
     <div class="cadastro">
 
-    <div class="Logo float ">
+    <!-- <div class="Logo floatR ">
             <img src="<?php echo DIRPAGE.'public/img/Logo0-frayHord-B-G.png'; ?>" alt="Logo">
-    </div>
+    </div> -->
     <h1>Cadastrar</h1>
-    <input class="h40 float w100" type="text" name="Nome" id="Nome" placeholder="Nome:" required><br>
-    <input class="h40 float w100" type="text" name="Sobrenome" id="Sobrenome" placeholder="Sobrenome:" required><br>
-    <input class="h40 float w100" type="text" name="CPF" id="CPF" placeholder="CPF:" required><br>
-    <input class="h40 float w100" type="date" name="Dt_Nascimento" id="Dt_Nascimento" placeholder="Data de Nascimento:" required><br>
-    <input class="h40 float w100" type="text" name="Telefone" id="Telefone" placeholder="Telefone:" required><br>
-    <input class="h40 float w100" type="email" id="Email" name="Email" placeholder="Email:" required><br>
-    <input class="h40 float w100" type="password" name="Senha" id="Senha" placeholder="Senha:" required><br>
-    <input class="h40 float w100" type="password" name="SenhaConf" id="SenhaConf" placeholder="Confirmação da Senha:" required><br>
+    <div class="floatL">
+    <input class="h40 floatL w100" type="text" name="Nome" id="Nome" placeholder="Nome" required><br>
+    <input class="h40 floatL w100" type="text" name="Sobrenome" id="Sobrenome" placeholder="Sobrenome" required><br>
+    <input class="h40 floatL w100" type="text" name="CPF" id="CPF" placeholder="CPF" required><br>
+    <input class="h40 floatL w100" type="date" name="Dt_Nascimento" id="Dt_Nascimento" required><br>
+    <input class="h40 floatL w100" type="text" name="Telefone" id="Telefone" placeholder="Telefone" required><br>
+    </div>
+    <div class="floatR">
+    <input class="h40 floatR w100" type="email" id="Email" name="Email" placeholder="Email" required><br>
+    <input class="h40 floatR w100" type="password" name="Senha" id="Senha" placeholder="Senha" required><br>
+    <input class="h40 floatR w100" type="password" name="SenhaConf" id="SenhaConf" placeholder="Confirmação da Senha" required><br>
     <input class="h40 floatR center" type="submit" value="Cadastrar">
-    <div class="loginTextos float ">Já tem conta? <a href="<?php echo DIRPAGE.'login';?>">Faça o login</a></div>
+    <div class="loginTextos floatR ">Já tem conta? <a href="<?php echo DIRPAGE.'login';?>">Faça o login</a></div>
+    </div>
     </div>
 </form>
 

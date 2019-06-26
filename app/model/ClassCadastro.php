@@ -8,13 +8,17 @@ class ClassCadastro extends ClassConexao{
     private $Db;
 
     #Cadastra clientes no sistema
-    protected function cadastroClientes($Nome, $Sexo, $Cidade){
+    protected function cadastroClientes($Nome, $Sobrenome, $CPF, $Dt_Nascimento, $Telefone, $Email, $Senha){
         $ID=0;
-        $this->Db=$this->conexaoDB()->prepare("insert into teste values(:ID, :Nome, :Sexo, :Cidade)");
+        $this->Db=$this->conexaoDB()->prepare("insert into cliente values(:ID, :Nome, :Sobrenome, :CPF, :Dt_Nascimento, :Telefone, :Email, :Senha)");
         $this->Db->bindParam(":ID",$ID,\PDO::PARAM_INT);
         $this->Db->bindParam(":Nome",$Nome,\PDO::PARAM_STR);
-        $this->Db->bindParam(":Sexo",$Sexo,\PDO::PARAM_STR);
-        $this->Db->bindParam(":Cidade",$Cidade,\PDO::PARAM_STR);
+        $this->Db->bindParam(":Sobrenome",$Sobrenome,\PDO::PARAM_STR);
+        $this->Db->bindParam(":CPF",$CPF,\PDO::PARAM_STR);
+        $this->Db->bindParam(":Dt_Nascimento",$Dt_Nascimento,\PDO::PARAM_STR);
+        $this->Db->bindParam(":Telefone",$Telefone,\PDO::PARAM_STR);
+        $this->Db->bindParam(":Email",$Email,\PDO::PARAM_STR);
+        $this->Db->bindParam(":Senha",$Senha,\PDO::PARAM_STR);
         $this->Db->execute();
     }
     
